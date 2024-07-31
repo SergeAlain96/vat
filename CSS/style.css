@@ -1,0 +1,358 @@
+/*header {
+    background: #5E503F;
+    color: #fff;
+    padding: 10px 0;
+    margin: 0 0;
+    text-align: center;
+    position:sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+  
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header img {
+    max-width: 60px;
+    vertical-align: middle;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #ffd700;
+}*/
+/*--------------Header-----------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour une meilleure lisibilité */
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: rgba(0, 0, 255, 0.8);
+}
+
+/*nav a:hover {
+    color: rgba(0, 0, 255, 0.8);
+}*/
+@media screen and (max-width:1282px){
+    header{
+        gap: 10px;
+    }
+}
+
+body{
+    font-family: "Poetsen One", sans-serif;
+    color: rgba(0, 0, 0, 0.795);
+}
+
+h1{
+text-align: left;
+
+}
+header ul li{
+    margin: 20px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.8s ease-in-out;
+    border-radius: 5px;
+    list-style-position: inside;
+}
+header>ul li:hover{
+    background-color:rgb(54,54,54);
+   scale:1.3;
+}
+#Title-Galerie{
+    text-align: center;
+    margin: 40px 0;
+    font-size: 40px;
+}
+div.Grille-galerie{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    justify-content: center;
+    grid-gap: 20px;
+    position: relative;
+    column-count: 4;
+    grid-row: 4;
+    gap: 10px;
+}
+div.Grille-galerie-item{
+    width: 200px;
+    min-height: 200px;
+    background-color: #333;
+    /*transition: 0.5s ease-in-out ;*/
+}
+div.Grille-galerie-item img{
+    width: 100%;
+    height: 100%;
+    cursor:pointer;
+}
+div.Grille-galerie-item:hover{
+    /*scale: 1.1;*/
+    /*overflow: hidden;*/
+   /* transform: scale(2.3);*/
+    transition: transform 0.4s;
+}
+main {
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  form label {
+    margin-bottom: 10px;
+  }
+  
+  form input, form select {
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  
+  form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #666;
+  }
+  
+  footer {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+/* Gallery grid */
+.Grille-galerie{
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    color: #8B4513;
+    flex-flow: column wrap;
+}
+/* TADASHI WORK */
+.video{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100;
+    opacity: 0.45;
+}
+.videocontainer{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100;
+}
+body video{
+   
+    position: relative;
+    width: 100%;
+}
+body .video::before{
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.356);
+    z-index: 999;
+}
+.tronc{
+    display: inline-grid;
+    flex-flow: column;
+    border:10px ;
+     margin: 200px 0;
+     gap: 20px;
+    padding: 20px;
+}
+
+/*.p1{
+    display: flex;
+    text-align: left;
+}*/
+.Introduction{
+    display: flex;
+    position: relative;
+    text-align: left;
+
+}
+.Situation_Geographique{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    max-width: 800px;
+    grid-row: 3;
+}
+
+/* WORKKKKKK */
+.Grille-galerie-item {
+    width: 600px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.4s;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+
+};
+
+.Grille-galerie-item:hover { 
+ transform: scale(2.3);
+  transition: transform 0.4s;
+}
+
+.Grille-galerie-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.Grille-galerie-item img:hover {
+    transform: scale(2.55);
+    transition: transform 0.3s;
+}
+/*.goku{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.3;
+    border-radius: 20px;
+}
+.oku{
+    width: 95%;
+    height: auto;
+    display: block;
+    border-radius: 2Opx;
+}
+/* Add animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header, .Grille-galerie-item, #Title-Galerie {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+}
+.GrillePatrimoine-galerie{
+    display: grid;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 8px;
+    /*padding: 20px;*/
+    color: #8B4513;
+    flex-flow: column wrap;
+}
+
+.Patrimoine_item {
+    width: 600px;
+    height: auto;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    overflow: hidden;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    margin-left: 146px;
+
+};
+
+
+.Patrimoine_item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.Patrimoine_Style{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+img{
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+p{
+    color: bl;
+    padding: 10px;
+}
+.pain{
+
+    display: grid;
+}

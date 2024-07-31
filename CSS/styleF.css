@@ -1,0 +1,166 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    margin: 0;
+    height: 100vh;
+    overflow-y: auto; /* Assure que le défilement vertical est possible */
+}
+
+
+.video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -100;
+}
+
+body video {
+    position: relative;
+    width: 100%;
+}
+
+body .video::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.356);
+    z-index: 999;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour une meilleure lisibilité */
+    color: #fff;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: rgba(0, 0, 255, 0.8);
+}
+
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Assure que le contenu est au-dessus de la vidéo */
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hotel_item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hotel_item img {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hotel_item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.hotel_item div p {
+    margin: 0;
+}
+
+.hotel_item div h3 {
+    font-family: "Bradley Hand ITC", cursive;
+    font-size: 1.1em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour lisibilité */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: justify;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background: #2ea1ec;
+    color: #fff;
+    margin-left: 1000px;
+    font-family: inherit;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #1c7ecf;
+    transform: scale(1.05);
+}
+
+button a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    color: #fff; /* Assure que le texte du lien est visible */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hotel_item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hotel_item img {
+      
